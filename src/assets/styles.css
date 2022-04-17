@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+:root {
+  --h3: clamp(1rem, 0.8vw, 0.9rem);
+  --h2: clamp(1.6rem, 2.3vw, 2.8rem);
+  --p: clamp(1rem, 1.2vw, 1.3rem);
+  --a: clamp(1.1rem, 1vw, 1.2rem);
+  --red: #C0345E;
+  --grey-text: #506473;
+  --navy: #19293A;
+  --grey-background: #EDEFF1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+  font-size: 10px;
+}
+
+/* global styles  */
+p {
+  color: var(--grey-text);
+  font-size: var(--p);
+}
+
+h3 {
+  color: var(--red);
+  font-size: var(--h3);
+}
+
+h2 {
+  font-size: var(--h2);
+  color: var(--navy);
+  font-family: itc-avant-garde-gothic-pro, "Open Sans";
+  font-weight: 400;
+
+}
+
+h2 .colouredTitle {
+  color: #506473;
+  font-size: var(--h2);
+  font-family: itc-avant-garde-gothic-pro, "Open Sans";
+  font-weight: 400;
+}
+
+a {
+  font-size: var(--a);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+#hero,
+#capableof {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-content {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-content .content-copy {
+  width: 50%;
+  text-align: left;
+}
+
+.left-content .content-copy h2 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.left-content .content-copy p {
+  margin-bottom: 32px;
+}
+
+.left-content .content-copy .anchor-container {
+  width: fit-content;
+}
+
+.left-content .content-copy a {
+  color: #19293A;
+  font-size: var(--a);
+  border-bottom: 2px solid var(--red);
+  text-decoration: none;
+}
+
+.left-content .content-copy a:after {
+  content: '';
+  display: block;
+  border-bottom: solid 2px var(--navy);
+  transition: transform 250ms ease-in-out;
+  transform: scale(0);
+  transform-origin: 100% 50%;
+}
+
+.left-content .content-copy a:hover:after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
+.right-content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-content .content-copy {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  flex-wrap: wrap;
+}
+
+
+.right-content .content-copy .catCol {
+  width: calc(50% - 50px);
+  margin: 25px;
+}
+
+.right-content .content-copy .catCol h4 {
+  padding-bottom: 10px;
+  font-size: var(--p);
+  color: var(--navy);
+  font-weight: 400;
+  font-family: itc-avant-garde-gothic-pro, "Open Sans";
+}
+
+.right-content .content-copy .catCol a {
+  padding: 5px 0px;
+  font-size: var(--p);
+  color: var(--grey-text);
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+}
+
+.right-content .content-copy .catCol a .arrow-hover-icon {
+  display: none;
+}
+
+.right-content .content-copy .catCol a:hover .arrow-hover-icon {
+  display: block;
+  margin-left: 5px;
+}
+
+
+
+/* home section */
+
+#hero {
+  height: 100vh;
+
+}
+
+#capableof {
+  min-height: 75vh;
+
+}
+
+#hero .hero-right-content {
+  background-image: url('../components/images/Spaniel01_gradient.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* capable of section */
+#capableof {
+  background-color: var(--grey-background);
+}
+
+#capableof .left-content .content-copy {
+  height: 50%;
+}
+
+#capableof .right-content .content-copy {
+  height: 50%;
+}
+
+
+
+/* responsive */
+@media(max-width: 700px) {
+  .left-content .content-copy {
+    width: 75%;
+  }
+
+  #capableof {
+    flex-direction: column;
+    min-height: 50vh;
+  }
+
+  #capableof .left-content {
+    width: 100%;
+  }
+
+  #capableof .left-content .content-copy h2 {
+    margin-top: 45px;
+  }
+
+  #capableof .right-content {
+    width: 100%;
+  }
+
+
+  #capableof .right-content .content-copy {
+    justify-content: space-between;
+    margin-bottom: 45px;
+  }
+
+  #capableof .right-content .content-copy .catCol {
+    width: fit-content;
+    margin: 25px 0px 0px 0px;
+  }
+
+
+
+}
+
+@media(max-width: 425px) {
+  #hero .right-content {
+    display: none;
+  }
+
+  #hero .left-content {
+    width: 100%;
+  }
+}
