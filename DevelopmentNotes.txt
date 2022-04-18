@@ -1,0 +1,10 @@
+Notes about tasks todo:
+
+1. The Nav state, which will appear and disappear as and when the user scrolls. Would like to discuss with Tom
+2. ‘Some of  our projects’:
+	a. The tabs would be created using buttons and ‘onclick’ events to change the tabs while also implementing a JS function to highlight the active slides and allow for the navigation buttons at the bottom to direct through the tabs
+	b. As part of the tab content I would use a grid layout to implement the titles for the projects
+3. ‘case studies’ & ‘testimonials’:
+	a. I would develop these sections using the Swiper API, SwiperJs. This is a reliable and quick way to develop slides which contains plenty of functionality to help with responsive designs
+
+
